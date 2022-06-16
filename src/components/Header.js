@@ -16,8 +16,8 @@ import MenuItem from "@mui/material/MenuItem";
 import { useTheme, styled } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
-import logo from "../images/logo.png";
-import flowers_horizontal from "../images/flowers-horizontal.png";
+import logo from "../assets/logo.png";
+import flowers_horizontal from "../assets/flowers-horizontal.png";
 import "./header.css";
 
 const pages = [

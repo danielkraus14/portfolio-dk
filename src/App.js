@@ -17,7 +17,6 @@ function App() {
         <Route path="/tecnologies" element={<Tecnologies />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Grid container sx={{ height: "150vh" }}></Grid>
     </ThemeProvider>
   );
 }

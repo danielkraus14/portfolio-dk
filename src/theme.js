@@ -6,7 +6,8 @@ const mainYellow = "#F4C49E";
 const mainGreen = "#4F817F";
 const mainGray = "#FAF5ED";
 const mainBrown = "#6A563A";
-const white = "#FAFAFA"
+const white = "#FAFAFA";
+const onix = '#10110F';
 
 const theme = createTheme({
   palette: {
@@ -27,6 +28,7 @@ const theme = createTheme({
         brown: mainBrown,
         white: white,
         gray: mainGray,
+        onix: onix,
     }
   },
 
