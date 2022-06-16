@@ -1,16 +1,18 @@
 import React from "react";
-import { Grid, Box, Typography, useTheme } from "@mui/material";
+import { Grid, Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 
 import './home.css';
 import videoBG from '../assets/backgroundVideo.mp4';
 
 const Home = () => {
   const theme = useTheme();
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'))
+  const matchesMD = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <Grid container justifyContent="center" >
-      <Grid item sx={{ backgroundPosition: 'top', backgroundAttachment: 'fixed'}}>
-        <video src={videoBG} autoPlay loop muted />
+      <Grid item sx={{ backgroundPosition: 'top'}}>
+        <video src={videoBG} autoPlay loop muted/>
       </Grid>
       {/* <Grid 
         item
@@ -39,7 +41,12 @@ const Home = () => {
         <Grid item>
           <Typography
             variant="h1"
-            sx={{ fontFamily: "Source Sans Pro", color: theme.palette.common.white, letterSpacing: 2.5, fontSize: '10rem', mixBlendMode: 'plus-lighter'  }}
+            sx={{ 
+              fontFamily: "Source Sans Pro", 
+              color: theme.palette.common.white, 
+              letterSpacing: 2.5, 
+              fontSize: matchesSM ? '4rem' : matchesMD ? '7rem' : '10rem', 
+              mixBlendMode: 'plus-lighter'  }}
             align='center'
           >
             <span style={{ color: theme.palette.primary.main}}>D</span>ANIEL{" "}
@@ -51,7 +58,7 @@ const Home = () => {
             fontFamily: 'Source Sans Pro',
             color: theme.palette.common.white,
             opacity: 1,
-            fontSize: '8rem',
+            fontSize: matchesSM ? '4rem' : matchesMD ? '6rem' : '8rem',
             margin: 0,
             padding: 'auto',
             marginTop: '5rem',

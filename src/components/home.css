@@ -4,3 +4,9 @@ video {
     height: 90vh;
     z-index: 1;
 }
+
+@media (max-width: 1000px) {
+    video {
+      object-fit: cover;
+    }
+  }
