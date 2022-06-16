@@ -6,7 +6,7 @@ const mainYellow = "#F4C49E";
 const mainGreen = "#4F817F";
 const mainGray = "#FAF5ED";
 const mainBrown = "#6A563A";
-const white = "#fff"
+const white = "#FAFAFA"
 
 const theme = createTheme({
   palette: {
@@ -29,6 +29,7 @@ const theme = createTheme({
         gray: mainGray,
     }
   },
+
 });
 
 export default theme;

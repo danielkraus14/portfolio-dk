@@ -5,10 +5,6 @@ body {
     overflow-x: hidden;
 }
 
-.flowers_horizontal{
-    width: 150px;
-    height: auto;
-    position: absolute;
-    transform: rotateY(180deg) translateX(0px);
-    top: 40px;
+* a {
+    text-decoration: none;
 }

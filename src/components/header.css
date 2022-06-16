@@ -1,0 +1,44 @@
+
+.flowers_horizontal{
+    width: 150px;
+    height: auto;
+    position: absolute;
+    transform: rotateY(180deg) translateX(0px);
+    top: 40px;
+}
+
+
+a.active button {
+    color: #C82F2B !important;
+}
+
+a.active button:hover {
+    color: #8c201e !important;
+}
+
+a.active {
+    color: #C82F2B !important;
+    
+}
+
+li a.active:before  {
+    
+    content: '';
+    display: block;
+    height: 100%;
+    background-color:#C82F2B ;
+    position: absolute;
+    top: 0;
+    left: 16px;
+    width: 8px !important;    
+    transition: all ease-in-out 0.3s;
+
+}
+
+li a.active:hover::before  {
+    background-color:#8c201e !important;
+}
+
+li:hover a.active {
+    color: #8c201e !important;
+}
