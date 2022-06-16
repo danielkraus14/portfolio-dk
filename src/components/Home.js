@@ -36,13 +36,14 @@ const Home = () => {
         justifyContent="center"
         alignItems="center"
         position='absolute'
-        sx={{height:'90.7vh', zIndex:15 , mixBlendMode: 'multiply', backgroundColor: theme.palette.common.black}}
+        sx={{height:'calc(100vh - 100px)', zIndex:15 , mixBlendMode: 'multiply', backgroundColor: theme.palette.common.black}}
       >
         <Grid item>
           <Typography
             variant="h1"
             sx={{ 
-              fontFamily: "Source Sans Pro", 
+              fontFamily: "Yuji Boku",
+              fontWeight: 800,
               color: theme.palette.common.white, 
               letterSpacing: 2.5, 
               fontSize: matchesSM ? '4rem' : matchesMD ? '7rem' : '10rem', 
@@ -64,6 +65,11 @@ const Home = () => {
             marginTop: '5rem',
           }}>FRONT-END DEVELOPER</Typography>
         </Grid>
+      </Grid>
+      <Grid item sx={{marginTop: '-5rem', zIndex: 25, paddingRight: matchesMD ? 0 : '2rem'}} container justifyContent={matchesMD ? 'center' : 'right'}> 
+        <Typography variant={'h5'}  sx={{color: theme.palette.common.white}} >
+          "You have to make it happend" .-Denis Diterot
+        </Typography>
       </Grid>
       
     </Grid>
