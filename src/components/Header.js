@@ -21,8 +21,9 @@ import flowers_horizontal from "../assets/flowers-horizontal.png";
 import "./header.css";
 
 const pages = [
-  { name: "Me", path: "/"},
-  { name: "Tecnologies", path: "/tecnologies" },
+  { name: "Home", path: "/"},
+  { name: "About", path: "/about"},
+  { name: "Portfolio", path: "/portfolio" },
   { name: "Contact", path: "/contact" },
 ];
 const CustomizedButton = styled(Button)(

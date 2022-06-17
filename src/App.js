@@ -5,7 +5,8 @@ import theme from "./theme";
 import Header from "./components/Header";
 import { Grid } from "@mui/material";
 import Home from "./components/Home";
-import Tecnologies from "./components/Tecnologies";
+import About from "./components/About";
+import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/tecnologies" element={<Tecnologies />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </ThemeProvider>
