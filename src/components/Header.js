@@ -129,11 +129,11 @@ const Header = () => {
                 fontWeight: 800,
                 fontSize: "2rem",
                 letterSpacing: ".3rem",
-                color: theme.palette.common.red,
+                color: theme.palette.common.black,
                 textDecoration: "none",
               }}
             >
-              DanielK
+              <Box sx={{color: theme.palette.primary.main}}>D</Box>aniel<Box sx={{color: theme.palette.primary.main}}>K</Box>
             </Typography>
 
             <Grid
@@ -179,6 +179,8 @@ const Header = () => {
                 ))}
               </Menu>
             </Grid>
+
+            {/* MOBILE BAR */}
             <Grid
               item
               sx={{
@@ -202,11 +204,11 @@ const Header = () => {
                 fontSize: "2rem",
                 fontWeight: 800,
                 letterSpacing: ".3rem",
-                color: theme.palette.common.red,
+                color: theme.palette.common.black,
                 textDecoration: "none",
               }}
             >
-              DanielK
+              <Box sx={{color: theme.palette.primary.main}}>D</Box>aniel<Box sx={{color: theme.palette.primary.main}}>K</Box>
             </Typography>
             <Grid item container direction="row" md>
               <Grid
