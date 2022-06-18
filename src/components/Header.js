@@ -9,9 +9,7 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { useTheme, styled } from "@mui/material";
 import { NavLink } from "react-router-dom";
@@ -28,7 +26,7 @@ const pages = [
 ];
 const CustomizedButton = styled(Button)(
   ({ theme }) => `
-  color: ${theme.palette.secondary.main};
+  color: ${theme.palette.secondary.dark};
   font-size: 1.3rem;
   padding: 10px 15px;
 
@@ -60,7 +58,7 @@ const CustomizedMenuItem = styled(MenuItem)(
   ({ theme }) => `
   
   a {
-    color: ${theme.palette.secondary.main};
+    color: ${theme.palette.secondary.dark};
     padding: 10px 15px;
     transition: all ease-out 0.3s  !important;
   }

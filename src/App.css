@@ -1,10 +1,94 @@
+:root {
+    --primary-color:#C82F2B;
+    --secondary-color: #DC98A3;
+    --secondary-color-dark: #9A6A72;
+    --info-color: #F4C49E;
+}
+
 body {
     padding-right: 0 !important;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color: #fafafa;
 }
 
 * a {
     text-decoration: none;
 }
+
+/* BUTTONS LINKS */
+
+.btn span{
+    display: block;
+    position: absolute;
+    background: #fff;
+  }
+  
+  .btn span:nth-child(2){
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+  }
+  
+  .btn:hover span:nth-child(2){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+  }
+  
+  .btn span:nth-child(3){
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+  }
+  
+  .btn:hover span:nth-child(3){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+  }
+  
+  .btn span:nth-child(4){
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+  }
+  
+  .btn:hover span:nth-child(4){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+  }
+  
+  .btn span:nth-child(5){
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+  }
+  
+  .btn:hover span:nth-child(5){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+  }

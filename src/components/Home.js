@@ -53,12 +53,12 @@ const Home = () => {
     <Fragment>
       <Grid container justifyContent="center" 
         sx={{
-          overflowX: 'hidden',
-          height: matchesSM ? undefined : "calc(100vh - 100px - 11rem)",
+          overflow: 'hidden',
+          height: matchesSM ? 'calc(100vh - 100px - 11rem)' : "calc(100vh - 100px - 11rem)",
           width: '100%'
         }}
       >
-        <Grid item sx={{ backgroundPosition: "top", height: matchesSM ? 'calc(100vh - 100px)' : "calc(100vh -100px - 2rem)" }}>
+        <Grid item sx={{ backgroundPosition: "top", height: matchesSM ? 'calc(100vh - 100px - 11rem)' : "calc(100vh -100px - 2rem)" }}>
           <video src={videoBG} autoPlay loop muted />
         </Grid>
         <Grid
@@ -70,7 +70,7 @@ const Home = () => {
           position="absolute"
           sx={{
             top: 0,
-            height: matchesSM ? '100vh' : "calc(100vh  - 11rem)",
+            height: matchesSM ? 'calc(100vh - 11rem)' : "calc(100vh  - 11rem)",
             lineHeight: "calc(100vh - 100px - 11rem)",
             mixBlendMode: "multiply",
             backgroundColor: theme.palette.common.black,
@@ -159,7 +159,6 @@ const Home = () => {
         item
         sx={{
           height: matchesMD ? "4.15rem" : "3.65rem",
-          width: "100vw",
         }}
         container
         justifyContent={matchesMD ? "center" : "right"}

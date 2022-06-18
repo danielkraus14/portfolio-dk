@@ -5,86 +5,13 @@ video {
   height: calc(100vh - 110px - 11rem);
   object-fit: cover;
   opacity: 0.8;
+  overflow: hidden;
 }
 
 @media (max-width: 700px) {
   video {
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 100px - 11rem);
   }
 }
 
 
-
-.btn span{
-  display: block;
-  position: absolute;
-  background: #fff;
-}
-
-.btn span:nth-child(2){
-  left: 0;
-  bottom: 0;
-  width: 1px;
-  height: 100%;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.5s;
-}
-
-.btn:hover span:nth-child(2){
-  transform: scaleY(1);
-  transform-origin: bottom;
-  transition: transform 0.5s;
-}
-
-.btn span:nth-child(3){
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s;
-}
-
-.btn:hover span:nth-child(3){
-  transform: scaleX(1);
-  transform-origin: left;
-  transition: transform 0.5s;
-}
-
-.btn span:nth-child(4){
-  right: 0;
-  bottom: 0;
-  width: 1px;
-  height: 100%;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.5s;
-  transition-delay: 0.5s;
-}
-
-.btn:hover span:nth-child(4){
-  transform: scaleY(1);
-  transform-origin: bottom;
-  transition: transform 0.5s;
-  transition-delay: 0.5s;
-}
-
-.btn span:nth-child(5){
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 1px;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s;
-  transition-delay: 0.5s;
-}
-
-.btn:hover span:nth-child(5){
-  transform: scaleX(1);
-  transform-origin: left;
-  transition: transform 0.5s;
-  transition-delay: 0.5s;
-}

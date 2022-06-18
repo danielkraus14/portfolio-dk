@@ -29,8 +29,16 @@ const theme = createTheme({
         white: white,
         gray: mainGray,
         onix: onix,
+    },
+    background: {
+      default: white
     }
   },
+  typography: {
+    subtitle1:{
+      fontSize: '1.3rem',
+    }
+  }
 
 });
 
