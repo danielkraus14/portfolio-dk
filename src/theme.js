@@ -8,6 +8,7 @@ const mainGray = "#FAF5ED";
 const mainBrown = "#6A563A";
 const white = "#FAFAFA";
 const onix = '#10110F';
+const darkGray = '#6B6B6B';
 
 const theme = createTheme({
   palette: {
@@ -28,7 +29,7 @@ const theme = createTheme({
         brown: mainBrown,
         white: white,
         gray: mainGray,
-        onix: onix,
+        darkGray: darkGray,
     },
     background: {
       default: white
@@ -37,7 +38,10 @@ const theme = createTheme({
   typography: {
     subtitle1:{
       fontSize: '1.3rem',
-    }
+    },
+    body2:{
+      fontSize: '1rem',
+    },
   }
 
 });

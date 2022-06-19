@@ -7,16 +7,20 @@ import {
   Avatar,
   Box,
   styled,
-  Button
+  Button,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
-import './about.css';
+import "./about.css";
 import avatarDk from "../assets/avatardk.png";
 import avatarDk1 from "../assets/avatardk1.png";
+import linkedin from "../assets/linkedin.svg";
+import github from "../assets/github.svg";
 
 const CustomizedButton = styled(Button)(
-    ({ theme }) => `
+  ({ theme }) => `
     position: relative;
     display: inline-block;
     border-radius: 0;
@@ -27,7 +31,7 @@ const CustomizedButton = styled(Button)(
       color: ${theme.palette.common.white}
     }
   `
-  );
+);
 
 const About = () => {
   const theme = useTheme();
@@ -71,11 +75,11 @@ const About = () => {
                 </svg>
               </figure>
             </Box>
-              <Avatar
-                alt="Daniel Kraus"
-                src={avatarDk1}
-                sx={{ width: 250, height: 250, zIndex: 2, position: 'absolute' }}
-              />
+            <Avatar
+              alt="Daniel Kraus"
+              src={avatarDk1}
+              sx={{ width: 250, height: 250, zIndex: 2, position: "absolute" }}
+            />
           </Grid>
 
           <Grid
@@ -83,7 +87,7 @@ const About = () => {
             container
             direction="column"
             xs={8}
-            sx={{ color: theme.palette.common.black}}
+            sx={{ color: theme.palette.common.black }}
           >
             <Grid item sx={{ margin: "1rem 2rem" }}>
               <Typography
@@ -109,29 +113,45 @@ const About = () => {
               </Typography>
             </Grid>
             <Grid item sx={{ margin: "1rem 2rem" }}>
-              <Typography variant="subtitle1">Freelance Front End Developer, whit skills in React, HTML, CSS and JavaScript.</Typography>
+              <Typography variant="subtitle1">
+                Freelance Front End Developer, with skills in React, HTML, CSS
+                and JavaScript.
+              </Typography>
             </Grid>
             <Grid item sx={{ margin: "1rem 2rem" }}>
-              <Typography variant="subtitle1">Also worked with Laravel and with libraries as Material UI and Bootstrap.</Typography>
+              <Typography variant="subtitle1">
+                Also worked with Laravel and with libraries as Material UI and
+                Bootstrap.
+              </Typography>
             </Grid>
             <Grid item sx={{ margin: "1rem 2rem" }}>
-              <Typography variant="subtitle1">I think that my better virtue is the eager to learn...</Typography>
+              <Typography variant="subtitle1">
+                I think that my better virtue is the eager to learn...
+              </Typography>
             </Grid>
-            <Grid item alignSelf='center' sx={{margin: '2rem 0'}}>
-              <Link to="/contact">
-                <CustomizedButton
-                  className="btn"
-                  variant="contained"
-                  color="primary"
-                  sx={{ padding: matchesMD ? undefined : "10px 30px" }}
-                >
-                  Hire Me
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </CustomizedButton>
-              </Link>
+            <Grid container justifyContent="flex-end" sx={{ margin: "2rem 0", paddinRight: '3rem' }}>
+              <ul className="social_media">
+                <li>
+                  <a href="https://github.com/danielkraus14" target='_blank'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span>
+                      <GitHubIcon sx={{fontSize: '40px'}} />
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/daniel-kraus-245ab1112/" target='_blank'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span>
+                      <LinkedInIcon sx={{fontSize: '40px'}} />
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </Grid>
           </Grid>
         </Grid>
@@ -194,7 +214,7 @@ const About = () => {
             container
             direction="column"
             xs={8}
-            sx={{ color: theme.palette.common.white, padding: '2rem 0' }}
+            sx={{ color: theme.palette.common.white, padding: "2rem 0" }}
           >
             <Grid item sx={{ margin: "1rem 2rem" }}>
               <Typography variant="subtitle1">
@@ -228,6 +248,25 @@ const About = () => {
               src={avatarDk}
               sx={{ width: 250, height: 250 }}
             />
+          </Grid>
+          <Grid container justifyContent="center" sx={{ margin: "2rem 0" }}>
+            <Link to="/contact">
+              <CustomizedButton
+                className="btn"
+                variant="contained"
+                sx={{
+                  padding: matchesMD ? undefined : "10px 30px",
+                  backgroundColor: theme.palette.common.white,
+                  color: theme.palette.primary.main,
+                }}
+              >
+                Hire Me
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </CustomizedButton>
+            </Link>
           </Grid>
         </Grid>
       </Grid>

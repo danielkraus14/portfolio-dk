@@ -164,7 +164,7 @@ const Home = () => {
         justifyContent={matchesMD ? "center" : "right"}
       >
         <Typography variant={"h5"} align={matchesMD ? 'center' : 'right'} sx={{ color: theme.palette.common.white, width: "100vw",backgroundColor: theme.palette.common.black, padding: matchesSM ? '2rem' : '0 2rem' }}>
-          "You have to make it happend" .-Denis Diterot
+          "You have to make it happen" .-Denis Diterot
         </Typography>
       </Grid>
     </Fragment>

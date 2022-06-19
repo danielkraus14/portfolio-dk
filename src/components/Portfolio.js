@@ -12,9 +12,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
 
-import cranes from "../assets/cranes.png";
 import mui from "../assets/material-ui.svg";
 import js from "../assets/js.svg";
 import react from "../assets/react.svg";
@@ -113,9 +111,9 @@ const CustomizedButton = styled(Button)(
   font-size: 1.2rem;
   transform: scale(1);
   transition: all 0.5s ease-out;
+  color: ${theme.palette.common.white};
 
   :hover {
-    color: ${theme.palette.primary.dark};
     background-color: transparent;
     transform: scale(1.1);
 }
@@ -141,7 +139,7 @@ const Portfolio = () => {
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Grid container justifyContent="center" sx={{ padding: "0 0.5rem" }}>
+    <Grid container justifyContent="center" sx={{ padding: "2rem 0.5rem" }}>
       <Typography variant="h2">
         M
         <Box display="inline-block" sx={{ color: theme.palette.primary.main }}>
@@ -171,7 +169,7 @@ const Portfolio = () => {
             md={6}
             lg={4}
             key={project.id}
-            sx={{ margin: matchesSM ? "2rem 1rem" : "2rem 0" }}
+            sx={{ margin: matchesSM ? "2rem 1rem" : "2rem 0rem" }}
           >
             <CustomizedCard sx={{ maxWidth: 450 }}>
               <a href={project.url} target='_blank'>
@@ -182,21 +180,21 @@ const Portfolio = () => {
                   alt={project.site}
                 />
               </a>
-              <CardContent>
+              <CardContent sx={{backgroundColor: theme.palette.common.darkGray, color: theme.palette.common.white }}>
                 <Typography gutterBottom variant="h5" component="div">
                   {project.site}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" sx={{padding: '1rem 0'}}>
                   {project.description}
                 </Typography>
               </CardContent>
-              <CardActions>
+              <CardActions sx={{backgroundColor: theme.palette.common.darkGray, color: theme.palette.common.white }}>
                 <Grid container justifyContent="space-between">
                   <CustomizedButton
                     size="small"
                     target="_blank"
                     href={project.url}
-                    sx={{ marginLeft: "1.5rem" }}
+                    sx={{ marginLeft: "1.5rem",  }}
                   >
                     See More
                   </CustomizedButton>
