@@ -91,7 +91,7 @@ const About = () => {
             <Grid item sx={{ margin: "1rem 2rem" }}>
               <Typography
                 variant="h3"
-                sx={{ marginBottom: "1rem", letterSpacing: "0.2rem", color: theme.palette.common.white }}
+                sx={{ marginBottom: "1rem", letterSpacing: "0.2rem", color: theme.palette.common.white, fontFamily: "'Otomanopee One', sans-serif" }}
               >
                 HELLO, I'M{" "}
                 <Box
@@ -101,7 +101,7 @@ const About = () => {
                   DANIEL KRAUS
                 </Box>
               </Typography>
-              <Typography variant="h4" sx={{color: theme.palette.common.white}}>
+              <Typography variant="h4" sx={{color: theme.palette.common.white, fontFamily: "'Otomanopee One', sans-serif" }}>
                 I AM A{" "}
                 <Box
                   component="span"
@@ -172,16 +172,24 @@ const About = () => {
           justifyContent={matchesMD ? "center" : "right"}
         >
           <Typography
-            variant="h3"
-            color="primary"
-            sx={{
-              marginBottom: "1rem",
-              marginTop: "1rem",
-              marginRight: matchesMD ? null : "2rem",
-            }}
-          >
-            About Me
-          </Typography>
+                variant="h3"
+                sx={{ marginRight: matchesMD ? null : "2rem",marginBottom: "1rem", letterSpacing: "0.2rem", color: theme.palette.common.white, fontFamily: "'Otomanopee One', sans-serif" }}
+              >
+                <Box
+                  component="span"
+                  sx={{ color: theme.palette.primary.main }}
+                >
+                  A
+                </Box>
+                BOUT{" "}
+                <Box
+                  component="span"
+                  sx={{ color: theme.palette.primary.main }}
+                >
+                  M
+                </Box>
+                E
+              </Typography>
         </Grid>
         <Grid
           container

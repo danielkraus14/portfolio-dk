@@ -47,6 +47,34 @@ const theme = createTheme({
     body2:{
       fontSize: '1.3rem',
     },
+  },
+  components:{
+    MuiOutlinedInput:{
+      styleOverrides:{
+        input:{
+          color: white,
+          '& input + fieldset + label':{
+            color: white
+          }
+        },
+        notchedOutline:{
+          borderColor: darkWhite,
+          color: white,
+        },
+        root:{
+          '&:hover .MuiOutlinedInput-notchedOutline':{
+            borderColor: darkPink
+          }
+        }
+      }
+    },
+    MuiFormLabel:{
+      styleOverrides:{
+        root:{
+          color: darkWhite
+        }
+      }
+    }
   }
 
 });

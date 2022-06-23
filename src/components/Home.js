@@ -77,11 +77,11 @@ const Home = () => {
             <CustomizedTitle
               variant="h1"
               sx={{
-                fontFamily: "Yuji Boku",
+                fontFamily: "'Otomanopee One', sans-serif",
                 fontWeight: 800,
                 color: theme.palette.common.white,
                 letterSpacing: 2.5,
-                fontSize: matchesSM ? "4rem" : matchesMD ? "7rem" : "10rem",
+                fontSize: matchesSM ? "3.5rem" : "6rem",
                 padding: "0 1rem",
               }}
               align="center"
@@ -96,7 +96,7 @@ const Home = () => {
             variant="h2"
             align="center"
             sx={{
-              fontFamily: "Source Sans Pro",
+              fontFamily: "'Otomanopee One', sans-serif",
               color: theme.palette.common.white,
               opacity: 1,
               fontSize: matchesSM ? "3.5rem" : "6rem",
@@ -112,7 +112,7 @@ const Home = () => {
             variant="h2"
             align="center"
             sx={{
-              fontFamily: "Source Sans Pro",
+              fontFamily: "'Otomanopee One', sans-serif",
               color: theme.palette.common.white,
               opacity: 1,
               fontSize: matchesSM ? "2.7rem" : "4.5rem",
@@ -225,7 +225,7 @@ const Home = () => {
               padding: "0 2rem",
             }}
           >
-            "You have to make it happen" .-Denis Diterot
+            "You have to make it happen" .-Denis Diderot
           </Typography>
         </Grid>
       </Grid>

@@ -140,7 +140,7 @@ const Portfolio = () => {
 
   return (
     <Grid container justifyContent="center" sx={{ padding: "2rem 0.5rem", backgroundColor: theme.palette.common.darkGray }}>
-      <Typography variant="h2" sx={{color: theme.palette.common.white}}>
+      <Typography variant="h2" sx={{color: theme.palette.common.white,fontFamily: "'Otomanopee One', sans-serif"}}>
         M
         <Box display="inline-block" sx={{ color: theme.palette.primary.main }}>
           Y

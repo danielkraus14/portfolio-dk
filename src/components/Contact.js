@@ -6,17 +6,29 @@ import {
   useTheme,
   FormGroup,
   TextField,
-  TextareaAutosize,
+  styled,
 } from "@mui/material";
 
 import crane from "../assets/cranes.png";
+
+const CustomizedTextField = styled(TextField)(
+  ({ theme }) => `
+  
+  '& .MuiInputBase-input-MuiOutlinedInput-input': {
+
+    color: #fff;
+
+    
+}
+`
+);
 
 const Contact = () => {
   const theme = useTheme();
 
   return (
-    <Grid container justifyContent="center" sx={{ padding: "2rem 0.5rem" }}>
-      <Typography variant="h2">
+    <Grid container justifyContent="center" sx={{ padding: "2rem 0.5rem", backgroundColor: theme.palette.common.darkGray, height: 'calc(100vh - 100px)'}}>
+      <Typography variant="h2" sx={{fontFamily: "'Otomanopee One', sans-serif", color: theme.palette.common.white}}>
         C
         <Box display="inline-block" sx={{ color: theme.palette.primary.main }}>
           O
@@ -33,22 +45,22 @@ const Contact = () => {
       <Grid container item direction="column">
         <FormGroup>
           <Grid item sx={{padding: '2rem'}}>
-            <TextField
+            <CustomizedTextField
               variant="outlined"
-              color="primary"
+              color="secondary"
               label="Name"
               id="name"
               sx={{borderColor: theme.palette.secondary.dark}}
             />
           </Grid>
           <Grid item sx={{padding: '2rem'}}>
-            <TextField variant="outlined" color="primary" label="Email" id="email" />
+            <TextField variant="outlined" color="secondary" label="Email" id="email" />
           </Grid>
           <Grid item sx={{padding: '2rem'}}>
             <TextField
               id="outlined-multiline-static"
               label="Message"
-              color="primary"
+              color="secondary"
               multiline
               rows={5}
               placeholder="Add a message"
