@@ -5,6 +5,8 @@
     bottom: -10px;
     align-self: center;
     transform: translateY(-10px);
+    margin-inline-end: 0;
+    margin-inline-start: 0;
     
 }
 
