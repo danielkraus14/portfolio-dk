@@ -1,4 +1,4 @@
-
+/* 
 video {
   width: 100%;
   top: 0;
@@ -13,5 +13,61 @@ video {
   height: calc(100vh - 100px - 11rem);
   }
 }
+ */
 
+
+.loader {
+  position: relative;
+  letter-spacing: 10px;
+  animation: typing 8s steps(12) infinite;
+  overflow: hidden;
+}
+
+@keyframes typing
+{
+  0%,90%,100%
+  {
+    width: 0;
+  }
+  30%,60%
+  {
+    width: 450px;
+  }
+}
+
+@media (max-width: 700px) {
+  @keyframes typing
+{
+  0%,90%,100%
+  {
+    width: 0;
+  }
+  30%,60%
+  {
+    width: 300px;
+  }
+}
+}
+
+@keyframes blinkCursor
+{
+  0%,75%
+  {
+    opacity: 1;
+  }
+  76%,100%
+  {
+    opacity: 0;
+  }
+}
+.loader::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #fff;
+  animation: blinkCursor 0.8s steps(3) infinite;
+}
 

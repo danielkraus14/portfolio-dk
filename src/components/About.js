@@ -45,14 +45,15 @@ const About = () => {
         container
         direction="column"
         alignItems="center"
-        sx={{ margin: "2rem 0" }}
+        sx={{ padding: "2rem 0", backgroundColor: theme.palette.common.darkGray }}
       >
         <Grid
           container
           sx={{
-            backgroundColor: theme.palette.common.white,
             opacity: 1,
             margin: "auto",
+            backgroundColor: theme.palette.common.darkGray,
+            padding: '0 2rem'
           }}
           xs={matchesLG ? 12 : 10}
           direction={matchesMD ? "column" : "row"}
@@ -63,7 +64,7 @@ const About = () => {
             alignItems="center"
             container
             justifyContent="center"
-            sx={{ margin: "2rem 0" }}
+            sx={{ padding: "2rem 0 " }}
           >
             <Box>
               <figure className="figure">
@@ -87,12 +88,11 @@ const About = () => {
             container
             direction="column"
             xs={8}
-            sx={{ color: theme.palette.common.black }}
           >
             <Grid item sx={{ margin: "1rem 2rem" }}>
               <Typography
                 variant="h3"
-                sx={{ marginBottom: "1rem", letterSpacing: "0.2rem" }}
+                sx={{ marginBottom: "1rem", letterSpacing: "0.2rem", color: theme.palette.common.white }}
               >
                 HELLO, I'M{" "}
                 <Box
@@ -102,7 +102,7 @@ const About = () => {
                   DANIEL KRAUS
                 </Box>
               </Typography>
-              <Typography variant="h4">
+              <Typography variant="h4" sx={{color: theme.palette.common.white}}>
                 I AM A{" "}
                 <Box
                   component="span"
@@ -113,23 +113,23 @@ const About = () => {
               </Typography>
             </Grid>
             <Grid item sx={{ margin: "1rem 2rem" }}>
-              <Typography variant="subtitle1">
+              <Typography variant="subtitle1" sx={{color: theme.palette.common.white}}>
                 Freelance Front End Developer, with skills in React, HTML, CSS
                 and JavaScript.
               </Typography>
             </Grid>
             <Grid item sx={{ margin: "1rem 2rem" }}>
-              <Typography variant="subtitle1">
+              <Typography variant="subtitle1" sx={{color: theme.palette.common.white}}>
                 Also worked with Laravel and with libraries as Material UI and
                 Bootstrap.
               </Typography>
             </Grid>
             <Grid item sx={{ margin: "1rem 2rem" }}>
-              <Typography variant="subtitle1">
+              <Typography variant="subtitle1" sx={{color: theme.palette.common.white}}>
                 I think that my better virtue is the eager to learn...
               </Typography>
             </Grid>
-            <Grid container justifyContent="flex-end" sx={{ margin: "2rem 0", paddinRight: '3rem' }}>
+            <Grid container justifyContent="flex-end" sx={{ margin: "2rem -1rem", paddinRight: '3rem' }}>
               <ul className="social_media">
                 <li>
                   <a href="https://github.com/danielkraus14" target='_blank'>
@@ -162,10 +162,13 @@ const About = () => {
         container
         direction="column"
         alignItems="center"
-        sx={{ margin: "2rem 0" }}
+        sx={{ padding: "2rem 0", backgroundColor: theme.palette.common.darkGray }}
+        xs={12}
       >
         <Grid
           container
+          item
+          md
           xs={matchesLG ? 12 : 10}
           justifyContent={matchesMD ? "center" : "right"}
         >
@@ -183,8 +186,10 @@ const About = () => {
         </Grid>
         <Grid
           container
+          item
+          md
           sx={{
-            backgroundColor: theme.palette.primary.main,
+            backgroundColor: theme.palette.primary.dark,
             opacity: 1,
             margin: "auto",
             maxWidth: "100vw",

@@ -111,7 +111,7 @@ const CustomizedButton = styled(Button)(
   font-size: 1.2rem;
   transform: scale(1);
   transition: all 0.5s ease-out;
-  color: ${theme.palette.common.white};
+  color: ${theme.palette.common.darkRed};
 
   :hover {
     background-color: transparent;
@@ -139,8 +139,8 @@ const Portfolio = () => {
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Grid container justifyContent="center" sx={{ padding: "2rem 0.5rem" }}>
-      <Typography variant="h2">
+    <Grid container justifyContent="center" sx={{ padding: "2rem 0.5rem", backgroundColor: theme.palette.common.darkGray }}>
+      <Typography variant="h2" sx={{color: theme.palette.common.white}}>
         M
         <Box display="inline-block" sx={{ color: theme.palette.primary.main }}>
           Y
@@ -178,17 +178,18 @@ const Portfolio = () => {
                   height="auto"
                   image={project.preview}
                   alt={project.site}
+                  sx={{minHeight: '192.92px'}}
                 />
               </a>
-              <CardContent sx={{backgroundColor: theme.palette.common.darkGray, color: theme.palette.common.white }}>
-                <Typography gutterBottom variant="h5" component="div">
+              <CardContent sx={{backgroundColor: theme.palette.common.white, height: '150px' }}>
+                <Typography gutterBottom variant="h4" component="div" sx={{color: theme.palette.common.darkRed}}>
                   {project.site}
                 </Typography>
-                <Typography variant="body2" sx={{padding: '1rem 0'}}>
+                <Typography variant="body2" sx={{padding: '1rem 0', color: theme.palette.common.darkGray}}>
                   {project.description}
                 </Typography>
               </CardContent>
-              <CardActions sx={{backgroundColor: theme.palette.common.darkGray, color: theme.palette.common.white }}>
+              <CardActions sx={{backgroundColor: theme.palette.common.white, color: theme.palette.common.darkGray }}>
                 <Grid container justifyContent="space-between">
                   <CustomizedButton
                     size="small"

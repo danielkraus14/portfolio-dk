@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import {
   Grid,
   Box,
@@ -10,9 +10,9 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
-import CodeIcon from '@mui/icons-material/Code';
-import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import CodeIcon from "@mui/icons-material/Code";
+import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
 import "./home.css";
 import videoBG from "../assets/backgroundVideo.mp4";
 
@@ -24,7 +24,6 @@ const CustomizedTitle = styled(Typography)(
 
 
   :hover {
-    transform: scale(1.1)
     
   }
 `
@@ -50,124 +49,186 @@ const Home = () => {
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Fragment>
-      <Grid container justifyContent="center" 
+      <Grid
+        container
+        justifyContent="center"
         sx={{
-          overflow: 'hidden',
-          height: matchesSM ? 'calc(100vh - 100px - 11rem)' : "calc(100vh - 100px - 11rem)",
-          width: '100%'
+          overflow: "hidden",
+          /* height: matchesSM ? 'calc(100vh - 100px - 11rem)' : "calc(100vh - 100px - 11rem)", */
+          width: "100%",
+          backgroundColor: theme.palette.common.darkGray,
         }}
       >
-        <Grid item sx={{ backgroundPosition: "top", height: matchesSM ? 'calc(100vh - 100px - 11rem)' : "calc(100vh -100px - 2rem)" }}>
+        {/* <Grid item sx={{ backgroundPosition: "top", height: matchesSM ? 'calc(100vh - 100px - 11rem)' : "calc(100vh -100px - 2rem)" }}>
           <video src={videoBG} autoPlay loop muted />
-        </Grid>
+        </Grid> */}
         <Grid
           item
           container
           direction="column"
           justifyContent="center"
           alignItems="center"
-          position="absolute"
           sx={{
             top: 0,
-            height: matchesSM ? 'calc(100vh - 11rem)' : "calc(100vh  - 11rem)",
-            lineHeight: "calc(100vh - 100px - 11rem)",
-            mixBlendMode: "multiply",
-            backgroundColor: theme.palette.common.black,
+            minHeight: matchesSM ? "calc(100vh - 100px - 12rem)" : "calc(100vh - 100px - 11rem)",
           }}
         >
-            <Link to="/about">
-              <CustomizedTitle
-                variant="h1"
-                sx={{
-                  fontFamily: "Yuji Boku",
-                  fontWeight: 800,
-                  color: theme.palette.common.white,
-                  letterSpacing: 2.5,
-                  fontSize: matchesSM ? "4rem" : matchesMD ? "7rem" : "10rem",
-                  padding: '0 1rem',
-                }}
-                align="center"
-              >
-                <span style={{ color: theme.palette.primary.main }}>D</span>
-                ANIEL{" "}
-                <span style={{ color: theme.palette.primary.main }}>K</span>RAUS
-              </CustomizedTitle>
-            </Link>
-
-            <Typography
-              variant="h2"
-              align="center"
-              sx={{
-                fontFamily: "Source Sans Pro",
-                color: theme.palette.common.white,
-                opacity: 1,
-                fontSize: matchesSM ? "4rem" : matchesMD ? "6rem" : "8rem",
-                margin: 0,
-                padding: "auto",
-                marginTop: "5rem",
-              }}
-            >
-              FRONT-END DEVELOPER
-            </Typography>
-        </Grid>
-      </Grid>
-      {/* GRID WITH BUTTONS */}
-      <Grid
-        item
-        sx={{
-          backgroundColor: theme.palette.common.black,
-          zIndex: 25,
-          padding: "2rem 0rem",
-        }}
-        container
-        justifyContent="space-evenly"
-        alignItems='center'
-      >
-        <Grid item sx={{ width: matchesSM ? '65px' : undefined, marginRight: matchesMD ? undefined : "2rem"}} alignSelf='center'>
           <Link to="/about">
-            <CustomizedButton className="btn" variant="contained" color='primary' sx={{padding: matchesMD ? undefined : '10px 30px'}}>
-            <PersonOutlineIcon sx={{verticalAlign: 'middle'}} /> { matchesSM ? '' :  'About Me'} 
-              <span></span>
-              <span></span>
-              <span></span>
-            </CustomizedButton>
+            <CustomizedTitle
+              variant="h1"
+              sx={{
+                fontFamily: "Yuji Boku",
+                fontWeight: 800,
+                color: theme.palette.common.white,
+                letterSpacing: 2.5,
+                fontSize: matchesSM ? "4rem" : matchesMD ? "7rem" : "10rem",
+                padding: "0 1rem",
+              }}
+              align="center"
+            >
+              <span style={{ color: theme.palette.primary.main }}>D</span>
+              ANIEL <span style={{ color: theme.palette.primary.main }}>K</span>
+              RAUS
+            </CustomizedTitle>
           </Link>
+          <Grid item>
+          <Typography
+            variant="h2"
+            align="center"
+            sx={{
+              fontFamily: "Source Sans Pro",
+              color: theme.palette.common.white,
+              opacity: 1,
+              fontSize: matchesSM ? "3.5rem" : "6rem",
+              margin: 0,
+              padding: "auto",
+              marginTop: "5rem",
+            }}
+          >
+            FRONT-END
+          </Typography>
+          </Grid>
+          <Typography
+            variant="h2"
+            align="center"
+            sx={{
+              fontFamily: "Source Sans Pro",
+              color: theme.palette.common.white,
+              opacity: 1,
+              fontSize: matchesSM ? "2.7rem" : "4.5rem",
+              margin: 0,
+              padding: "auto",
+              marginTop: "2rem",
+            }}
+            className="loader"
+          >
+            DEVELOPER...
+          </Typography>
         </Grid>
-        <Grid item sx={{ width: matchesSM ? '65px' : undefined, marginRight: matchesMD ? undefined : "2rem"}} alignSelf='center'>
-          <Link to="/portfolio">
-            <CustomizedButton className="btn" variant="contained" color='primary' sx={{padding: matchesMD ? undefined : '10px 30px'}}>
-            <CodeIcon sx={{verticalAlign: 'middle'}} /> { matchesSM ? '' :  'Portfolio'}
-              <span></span>
-              <span></span>
-              <span></span>
-            </CustomizedButton>
-          </Link>
+        {/* GRID WITH BUTTONS */}
+        <Grid
+          item
+          sx={{
+            backgroundColor: theme.palette.common.darkGray,
+            zIndex: 25,
+            padding: "2rem 0rem",
+          }}
+          container
+          justifyContent="space-evenly"
+          alignItems="center"
+        >
+          <Grid
+            item
+            sx={{
+              width: matchesSM ? "65px" : undefined,
+              marginRight: matchesMD ? undefined : "2rem",
+            }}
+            alignSelf="center"
+          >
+            <Link to="/about">
+              <CustomizedButton
+                className="btn"
+                variant="contained"
+                color="primary"
+                sx={{ padding: matchesMD ? undefined : "10px 30px" }}
+              >
+                <PersonOutlineIcon sx={{ verticalAlign: "middle" }} />{" "}
+                {matchesSM ? "" : "About Me"}
+                <span></span>
+                <span></span>
+                <span></span>
+              </CustomizedButton>
+            </Link>
+          </Grid>
+          <Grid
+            item
+            sx={{
+              width: matchesSM ? "65px" : undefined,
+              marginRight: matchesMD ? undefined : "2rem",
+            }}
+            alignSelf="center"
+          >
+            <Link to="/portfolio">
+              <CustomizedButton
+                className="btn"
+                variant="contained"
+                color="primary"
+                sx={{ padding: matchesMD ? undefined : "10px 30px" }}
+              >
+                <CodeIcon sx={{ verticalAlign: "middle" }} />{" "}
+                {matchesSM ? "" : "Portfolio"}
+                <span></span>
+                <span></span>
+                <span></span>
+              </CustomizedButton>
+            </Link>
+          </Grid>
+          <Grid
+            item
+            sx={{
+              width: matchesSM ? "65px" : undefined,
+              marginRight: matchesMD ? undefined : "2rem",
+            }}
+            alignSelf="center"
+          >
+            <Link to="/contact">
+              <CustomizedButton
+                className="btn"
+                variant="contained"
+                color="primary"
+                sx={{ padding: matchesMD ? undefined : "10px 30px" }}
+              >
+                <ConnectWithoutContactIcon sx={{ verticalAlign: "middle" }} />{" "}
+                {matchesSM ? "" : "Contact Me"}
+                <span></span>
+                <span></span>
+                <span></span>
+              </CustomizedButton>
+            </Link>
+          </Grid>
         </Grid>
-        <Grid item sx={{ width: matchesSM ? '65px' : undefined, marginRight: matchesMD ? undefined : "2rem"}} alignSelf='center'>
-          <Link to="/contact">
-            <CustomizedButton className="btn" variant="contained" color='primary' sx={{ padding: matchesMD ? undefined : '10px 30px'}}>
-            <ConnectWithoutContactIcon sx={{verticalAlign: 'middle'}} /> { matchesSM ? '' :  'Contact Me'} 
-              <span></span>
-              <span></span>
-              <span></span>
-            </CustomizedButton>
-          </Link>
+        <Grid
+          item
+          sx={{
+            height: matchesMD ? "5.45rem" : "3.65rem",
+          }}
+          container
+          justifyContent={matchesMD ? "center" : "right"}
+        >
+          <Typography
+            variant={"h5"}
+            align={matchesMD ? "center" : "right"}
+            sx={{
+              color: theme.palette.common.white,
+              width: "100vw",
+              backgroundColor: theme.palette.common.darkGray,
+              padding: "0 2rem",
+            }}
+          >
+            "You have to make it happen" .-Denis Diterot
+          </Typography>
         </Grid>
       </Grid>
-      <Grid
-        item
-        sx={{
-          height: matchesMD ? "4.15rem" : "3.65rem",
-        }}
-        container
-        justifyContent={matchesMD ? "center" : "right"}
-      >
-        <Typography variant={"h5"} align={matchesMD ? 'center' : 'right'} sx={{ color: theme.palette.common.white, width: "100vw",backgroundColor: theme.palette.common.black, padding: matchesSM ? '2rem' : '0 2rem' }}>
-          "You have to make it happen" .-Denis Diterot
-        </Typography>
-      </Grid>
-    </Fragment>
   );
 };
 

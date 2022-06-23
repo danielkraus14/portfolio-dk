@@ -7,8 +7,10 @@ const mainGreen = "#4F817F";
 const mainGray = "#FAF5ED";
 const mainBrown = "#6A563A";
 const white = "#FAFAFA";
-const onix = '#10110F';
-const darkGray = '#6B6B6B';
+const darkGray = '#292929';
+const darkRed = '#B00020';
+const darkWhite = '#7E7E7E';
+const darkPink = '#CF6679';
 
 const theme = createTheme({
   palette: {
@@ -30,6 +32,9 @@ const theme = createTheme({
         white: white,
         gray: mainGray,
         darkGray: darkGray,
+        darkRed: darkRed,
+        darkWhite: darkWhite,
+        darkPink: darkPink,
     },
     background: {
       default: white
@@ -40,7 +45,7 @@ const theme = createTheme({
       fontSize: '1.3rem',
     },
     body2:{
-      fontSize: '1rem',
+      fontSize: '1.3rem',
     },
   }
 
