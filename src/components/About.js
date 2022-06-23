@@ -53,7 +53,6 @@ const About = () => {
             opacity: 1,
             margin: "auto",
             backgroundColor: theme.palette.common.darkGray,
-            padding: '0 2rem'
           }}
           xs={matchesLG ? 12 : 10}
           direction={matchesMD ? "column" : "row"}
