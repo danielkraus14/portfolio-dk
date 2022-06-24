@@ -92,3 +92,24 @@ body {
     transition: transform 0.5s;
     transition-delay: 0.5s;
   }
+
+
+
+
+@-webkit-keyframes autofill {
+    0%,100% {
+        color: #fff;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
+
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+  color: #fff !important;
+  appearance: none;
+}

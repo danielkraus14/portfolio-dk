@@ -16,8 +16,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import "./about.css";
 import avatarDk from "../assets/avatardk.png";
 import avatarDk1 from "../assets/avatardk1.png";
-import linkedin from "../assets/linkedin.svg";
-import github from "../assets/github.svg";
 
 const CustomizedButton = styled(Button)(
   ({ theme }) => `
@@ -35,7 +33,6 @@ const CustomizedButton = styled(Button)(
 
 const About = () => {
   const theme = useTheme();
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
   const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
 
@@ -131,7 +128,7 @@ const About = () => {
             <Grid container justifyContent="flex-end" sx={{ margin: "2rem -1rem", paddinRight: '3rem' }}>
               <ul className="social_media">
                 <li>
-                  <a href="https://github.com/danielkraus14" target='_blank'>
+                  <a href="https://github.com/danielkraus14" target='_blank' rel="noreferrer">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -141,7 +138,7 @@ const About = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/daniel-kraus-245ab1112/" target='_blank'>
+                  <a href="https://www.linkedin.com/in/daniel-kraus-245ab1112/" target='_blank' rel="noreferrer">
                     <span></span>
                     <span></span>
                     <span></span>

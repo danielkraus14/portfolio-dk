@@ -55,16 +55,22 @@ const theme = createTheme({
           color: white,
           '& input + fieldset + label':{
             color: white
+          },
+          '& -webkit-autofill:active':{
+            backgroundColor: darkRed,
+            color: white,
           }
         },
         notchedOutline:{
           borderColor: darkWhite,
           color: white,
+          border: '2px solid',
         },
         root:{
           '&:hover .MuiOutlinedInput-notchedOutline':{
             borderColor: darkPink
-          }
+          },
+          minWidth: '300px'
         }
       }
     },
