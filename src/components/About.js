@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import {
   Grid,
   Typography,
@@ -36,6 +36,10 @@ const About = () => {
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
   const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
 
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
+  
   return (
     <Fragment>
       <Grid

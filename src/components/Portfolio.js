@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {
   Grid,
   Box,
@@ -137,7 +137,10 @@ const Portfolio = () => {
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
-
+  
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   return (
     <Grid container justifyContent="center" sx={{ padding: "2rem 0.5rem", backgroundColor: theme.palette.common.darkGray }}>
       <Typography variant="h2" sx={{color: theme.palette.common.white,fontFamily: "'Otomanopee One', sans-serif"}}>

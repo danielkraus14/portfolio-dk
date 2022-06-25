@@ -28,7 +28,9 @@ const CustomizedButton = styled(Button)(
   
     :hover {
       color: ${theme.palette.common.white}
-    }
+    },
+
+    
   `
 );
 
@@ -185,7 +187,10 @@ const Contact = () => {
                       padding: matchesMD ? undefined : "10px 30px",
                       backgroundColor: theme.palette.primary.main,
                       color: theme.palette.common.white,
-                      width: '140px'
+                      width: '140px',
+                      '&.Mui-disabled': {
+                        color: theme.palette.common.darkWhite
+                      }
                     }}
                     disabled={
                       name.length === 0 ||

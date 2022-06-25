@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {
   Grid,
   Button,
@@ -45,6 +45,10 @@ const Home = () => {
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
 
   return (
       <Grid
