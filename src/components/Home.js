@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Grid,
-  Box,
   Button,
   Typography,
   useTheme,
@@ -14,7 +13,6 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import CodeIcon from "@mui/icons-material/Code";
 import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
 import "./home.css";
-import videoBG from "../assets/backgroundVideo.mp4";
 
 const CustomizedTitle = styled(Typography)(
   ({ theme }) => `

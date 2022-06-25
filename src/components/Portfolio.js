@@ -172,7 +172,7 @@ const Portfolio = () => {
             sx={{ margin: matchesSM ? "2rem 1rem" : "2rem 0rem" }}
           >
             <CustomizedCard sx={{ maxWidth: 450 }}>
-              <a href={project.url} target='_blank'>
+              <a href={project.url} target='_blank' rel="noreferrer">
                 <CardMedia
                   component="img"
                   height="auto"

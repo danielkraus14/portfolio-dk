@@ -4,14 +4,12 @@ import {
   Typography,
   Box,
   useTheme,
-  FormGroup,
   TextField,
   styled,
   useMediaQuery,
   Button,
   CircularProgress
 } from "@mui/material";
-import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -72,13 +70,13 @@ const Contact = () => {
   
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_9y4xcl3', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    console.log(e)
+    emailjs.sendForm('service_9y4xcl3', 'template_2j3p93b', form.current, 'C3zm3OnvLg_CUQuwG')
       .then((result) => {
           setLoading(false)
-          console.log(result.text);
+          console.log(result);
       }, (error) => {
-          console.log(error.text);
+          console.log(error);
       });
   };
 
@@ -135,13 +133,15 @@ const Contact = () => {
         >
           {/* CONTAINER WITH FORM AND SUBMIT BUTTON */}
           <Grid container item md justifyContent="center">
-            <FormGroup ref={form} onSubmit={sendEmail}>
+            <form ref={form} onSubmit={sendEmail}>
               <Grid item>
                 <Grid item sx={{ padding: "2rem 0" }}>
                   <TextField
                     variant="outlined"
                     color="secondary"
                     label="Name"
+                    type="text"
+                    name="user_name"
                     id="name"
                     sx={{ borderColor: theme.palette.secondary.dark }}
                     value={name}
@@ -153,6 +153,8 @@ const Contact = () => {
                     variant="outlined"
                     color="secondary"
                     label="Email"
+                    type="email"
+                    name="user_email"
                     id="email"
                     value={email}
                     error={emailHelper.length !== 0}
@@ -164,6 +166,7 @@ const Contact = () => {
                   <TextField
                     id="message"
                     label="Message"
+                    name="message"
                     color="secondary"
                     multiline
                     rows={5}
@@ -174,7 +177,6 @@ const Contact = () => {
                 </Grid>
               </Grid>
               <Grid container justifyContent="center" sx={{ margin: "2rem 0" }}>
-                <Link to="/contact">
                   <CustomizedButton
                     className="btn"
                     variant="contained"
@@ -198,9 +200,8 @@ const Contact = () => {
                     <span></span>
                     <span></span>
                   </CustomizedButton>
-                </Link>
               </Grid>
-            </FormGroup>
+            </form>
           </Grid>
 
           {/* CONTAINER COLUMN WITH INFORMATION AND SOCIAL MEDIA */}
