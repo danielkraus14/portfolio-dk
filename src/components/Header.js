@@ -11,7 +11,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { useTheme, styled } from "@mui/material";
+import { useTheme, styled, useMediaQuery } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 import logo from "../assets/logo.png";
@@ -97,6 +97,7 @@ const CustomizedMenuItem = styled(MenuItem)(
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const theme = useTheme();
+  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -186,7 +187,8 @@ const Header = () => {
               sx={{
                 display: { xs: "flex", md: "none" },
                 mr: 1,
-                alignSelf: "flex-end",
+                alignSelf: "flex-start",
+                marginRight: '40%',
               }}
             >
               <img src={logo} width="100px" alt="logo" />
@@ -198,7 +200,7 @@ const Header = () => {
               href=""
               sx={{
                 mr: 2,
-                display: { xs: "flex", md: "none" },
+                display: { xs: "none", md: "none" } ,
                 flexGrow: 1,
                 fontFamily: "Yuji Boku",
                 fontSize: "2rem",
@@ -208,7 +210,7 @@ const Header = () => {
                 textDecoration: "none",
               }}
             >
-              <Box sx={{color: theme.palette.primary.main}}>D</Box>aniel<Box sx={{color: theme.palette.primary.main}}>K</Box>
+            <Box sx={{color: theme.palette.primary.main}}>D</Box>aniel<Box sx={{color: theme.palette.primary.main}}>K</Box>
             </Typography>
             <Grid item container direction="row" md>
               <Grid
