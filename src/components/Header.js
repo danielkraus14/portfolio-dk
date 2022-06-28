@@ -11,7 +11,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { useTheme, styled, useMediaQuery } from "@mui/material";
+import { useTheme, styled } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 import logo from "../assets/logo.png";
@@ -97,7 +97,8 @@ const CustomizedMenuItem = styled(MenuItem)(
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const theme = useTheme();
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+
+  // const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
